@@ -28,10 +28,10 @@ const Verification = () => {
             We've sent a 6-digit verification code to{" "}
             {authInfo.emailOrPhoneFlag ? "the emai address" : "your phone"}
             <a href="#" className="block text-[16px] pt-1">
-              {authInfo.inputValue}
+              +1 {authInfo.inputValue}
             </a>
           </div>
-          <div className="flex flex-col justify-center">
+          <div className="flex flex-col justify-center items-center">
             <div className="text-[14px] leading-[19px] text-[#808080] text-center pt-[22px]">
               Enter verification code
             </div>
@@ -46,11 +46,9 @@ const Verification = () => {
             <button
               disabled={false}
               className="flex items btn btn-primary rounded-[10px] capitalize mt-8"
+              onClick={() => router.push("create-account")}
             >
-              <div
-                className="text-[16px] leading-[22px] mr-2"
-                onClick={() => router.push("create-account")}
-              >
+              <div className="max-w-[124px] text-[16px] leading-[22px] mr-2">
                 Continue
               </div>
               <RiArrowRightSLine fontSize={20} />
