@@ -15,9 +15,9 @@ module.exports = {
           "primary-focus": "#685FFF",
           "primary-content": "#ffffff",
 
-          secondary: "#9932CC",
-          "secondary-focus": "#9902CC",
-          "secondary-content": "#ffffff",
+          neutral: "#414047",
+          "neutral-focus": "#413047",
+          "neutral-content": "#ffffff",
         },
       },
     ],
