@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
+import { useRouter } from "next/router";
 import { RiArrowRightSLine } from "react-icons/ri";
 
 import { NearLogin } from "elements";
@@ -6,11 +7,14 @@ import { NearLogin } from "elements";
 import { isEmpty } from "utils/isEmpty";
 import { isEmail } from "utils/isEmail";
 import { isPhone } from "utils/isPhone";
+import AuthInfoContext from "context/AuthInfoContext";
 
 const AuthHome = () => {
+  const router = useRouter();
   const [emailOrPhoneFlag, setEmailOrPhone] = useState(false);
   const [inputValue, setInputValue] = useState("");
   const [enable, setEnable] = useState(true);
+  const { setContext } = useContext<any>(AuthInfoContext);
 
   useEffect(() => {
     setInputValue("");
@@ -34,6 +38,7 @@ const AuthHome = () => {
         }
       }
     }
+    setContext({ inputValue, emailOrPhoneFlag });
   }, [inputValue, emailOrPhoneFlag]);
 
   const typeValue = (value: any) => {
@@ -86,7 +91,12 @@ const AuthHome = () => {
           disabled={enable}
           className="flex items btn btn-primary rounded-[10px] capitalize mt-5"
         >
-          <div className="text-[16px] leading-[22px] mr-2">Continue</div>
+          <div
+            className="text-[16px] leading-[22px] mr-2"
+            onClick={() => router.push("auth/verification")}
+          >
+            Continue
+          </div>
           <RiArrowRightSLine fontSize={20} />
         </button>
         <div className="max-w-[281px] text-[12px] text-[#828282] text-center leading-[16px] pt-6 pb-8">
