@@ -19,6 +19,8 @@ const Verification = () => {
     });
   }, [context]);
 
+  const CODE_LENGTH = new Array(6).fill(0);
+
   return (
     <div>
       <AuthTitleHeader title="Verification" />
@@ -36,12 +38,9 @@ const Verification = () => {
               Enter verification code
             </div>
             <div className="flex space-x-[10px] pt-[10px]">
-              <VerificationInput />
-              <VerificationInput />
-              <VerificationInput />
-              <VerificationInput />
-              <VerificationInput />
-              <VerificationInput />
+              {CODE_LENGTH.map((v, index) => (
+                <VerificationInput key={index} />
+              ))}
             </div>
             <button
               disabled={false}
