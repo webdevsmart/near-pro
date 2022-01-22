@@ -49,14 +49,17 @@ const CreateAccount = () => {
               <label className="text-[14px] leading-[19px] text-[#6F6E73]">
                 Account ID
               </label>
-              <div className="inline-flex">
+              <div className="flex text-[16px] leading-[20px] border border-[#BEBEC2] box-border rounded-[8px] mt-[10px]">
                 <input
                   type="text"
                   name="id"
-                  placeholder="yourname"
-                  className="input max-w-[306px] w-full text-[16px] text-[#33373B] placeholder:text-[#828282] font-bold placeholder:font-medium border-[#BEBEC2] mt-[10px]"
+                  placeholder="Ex. John doe"
+                  className="input border-[#BEBEC2] text-[16px] text-[#33373B] placeholder:text-[#828282] font-bold placeholder:font-medium "
                   onChange={(e) => changeAccountInfo(e)}
                 />
+                <div className="flex items-center m-auto text-[16px] text-[#33373B] font-bold">
+                  .near
+                </div>
               </div>
             </div>
           </div>
