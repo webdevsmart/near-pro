@@ -20,7 +20,7 @@ const CreateAccount = () => {
     } else {
       setEnable(false);
     }
-  });
+  }, [accountInfo.name, accountInfo.id]);
 
   return (
     <div>

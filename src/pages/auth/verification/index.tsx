@@ -27,7 +27,7 @@ const Verification = () => {
       <div className="px-7">
         <div className="flex flex-col items-center justify-center">
           <div className="max-w-[306px] m-auto text-[14px] text-[#414047 font-medium leading-6 text-center pt-[30px]">
-            We've sent a 6-digit verification code to{" "}
+            We&apos;ve sent a 6-digit verification code to{" "}
             {authInfo.emailOrPhoneFlag ? "the emai address" : "your phone"}
             <a href="#" className="block text-[16px] pt-1">
               +1 {authInfo.inputValue}
@@ -55,7 +55,7 @@ const Verification = () => {
           </div>
           <div className="w-full border border-[#E9E6E6] m-8"></div>
           <div className="pt-[25px] text-center">
-            Didn't receive your code?
+            Didn&apos;t receive your code?
             <a href="#" className="block text-[16px] pt-[25px]">
               Send to a different email address
             </a>
