@@ -1,7 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Image from "next/image";
-
-import NearLogo from "assets/images/near-logo.png";
 import { RiArrowRightSLine } from "react-icons/ri";
 
 import { NearLogin } from "elements";
@@ -45,12 +42,6 @@ const AuthHome = () => {
 
   return (
     <div className="flex flex-col px-7">
-      <div className={`hidden border border-[#BEBEC2]`}>ss</div>
-      <div className="flex justify-center items-center bg-[#EAEFFF] border-b border-b-[#DFDFE0] py-[15px] cursor-pointer">
-        <Image src={NearLogo} alt="NearLogo" width={17} height={18} />
-        <span className="font-bold text-[20px] text-[#B072FF]">Home</span>
-        <span className="font-bold text-[20px] text-[#33373B]">Page</span>
-      </div>
       <div className="flex justify-center space-x-[22px] pt-[21px]">
         <div
           className={`text-[14px] leading-[18px] font-medium rounded-[10px] px-3 py-[6px] cursor-pointer hover:opacity-70 ${
